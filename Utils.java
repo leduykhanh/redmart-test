@@ -1,10 +1,10 @@
 
 public class Utils {
-    public static String getColHeader(int columnIndex) {
+    public static String getRowHeader(int rowIndex) {
         String h = "";
-        while (columnIndex > 0) {
-            h = (char) ('A' + (columnIndex - 1) % 26) + h;
-            columnIndex = (columnIndex - 1) / 26;
+        while (rowIndex > 0) {
+            h = (char) ('A' + (rowIndex - 1) % 26) + h;
+            rowIndex = (rowIndex - 1) / 26;
         }
         return h;
     }
