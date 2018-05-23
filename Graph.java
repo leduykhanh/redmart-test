@@ -65,10 +65,10 @@ public class Graph {
 		if (visited.contains(node)) return;
 		visited.add(node);
 		for (Node child : adj.get(node)) {
+			dfs(child, visited);
 			if (child.evaluated) {
 				node.setFormula(node.getFormula().replace(child.getId(), child.getValue() + ""));
 			}
-			dfs(child, visited);
 		}
 		node.processFormula();
 	}
