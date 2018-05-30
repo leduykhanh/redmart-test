@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import classes.Graph;
+
 public class Spreadsheet {
 	public static void main(String[] args) {
 		Spreadsheet test = new Spreadsheet();

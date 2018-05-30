@@ -1,4 +1,7 @@
+package classes;
 import java.util.*;
+
+import utils.Utils;
 
 public class Graph {
 	private final Map<Node, List<Node>> adj;
@@ -73,7 +76,7 @@ public class Graph {
 		node.processFormula();
 	}
 	
-	void printGraph() {
+	public void printGraph() {
 		for (Node node : adj.keySet()) {
 			System.out.print(node);
 			for (Node child : adj.get(node)) {
@@ -83,7 +86,7 @@ public class Graph {
 		}
 	}
 	
-	void printSheet() {
+	public void printSheet() {
 		if(isCyclic()) {
 			System.out.println("The input spreadsheet is cyclic");
 			System.exit(0);
